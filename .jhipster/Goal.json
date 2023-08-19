@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "entityTableName": "goal",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duoDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "barrier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "solution",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "complete",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Goal",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "task",
+      "otherEntityRelationshipName": "goal",
+      "relationshipName": "task",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

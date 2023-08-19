@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "entityTableName": "task",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "barrier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "solution",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "duoDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "comprete",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Task",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "goal",
+      "relationshipName": "goal",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
